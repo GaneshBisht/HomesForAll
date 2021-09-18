@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+   <PreferenceCategory android:title="Profile"
+       android:key="category_profile">
+
+       <EditTextPreference
+           android:key="key_name"
+           android:defaultValue=""
+           android:title=""
+           android:icon="@drawable/img_profile_image"
+           android:summary="change profile name"
+           app:dialogTitle="Profile Name"/>
+
+   </PreferenceCategory>
+
+    <SwitchPreference
+        android:key="key_notification"
+        android:defaultValue="true"
+        android:title="Notification"
+        android:summary="change notification setting"/>
+
+    <ListPreference
+        android:defaultValue="English"
+        android:entries="@array/language"
+        android:entryValues="@array/language"
+        android:key="key_language"
+        android:summary="change app language"
+        android:title="Language" />
+
+    <Preference
+        android:key="key_visit"
+        android:title="Visit"
+        android:summary="www.homesforall.com">
+        <intent android:action="android.intent.action.VIEW"
+            android:data="http://www.homesforall.com"/>
+    </Preference>
+
+    <PreferenceCategory
+        android:key="key_account"
+        android:title="Account">
+
+        <Preference android:key="key_logout"
+            android:title="Logout"
+            android:summary="signing out from app"/>
+
+        <Preference android:key="key_deactivate"
+            android:title="Deactivate Account"
+            android:layout="@layout/activity_ads_detail"
+            android:summary="account will be deleted permanently"/>
+
+    </PreferenceCategory>
+
+
+
+</PreferenceScreen>

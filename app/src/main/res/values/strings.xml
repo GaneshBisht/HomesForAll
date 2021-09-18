@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Instagram</string>
+
+    <string-array name="language">
+        <item>English</item>
+        <item>Hindi</item>
+    </string-array>
+
+</resources>
